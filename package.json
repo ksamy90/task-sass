@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "serve": "webpack-dev-server",
-    "build": "webpack --watch"
+    "build": "webpack",
+    "prod": "webpack -p --env production",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "author": "samy",
   "license": "ISC",
@@ -16,6 +19,8 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
+    "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^3.0.0",
     "live-server": "^1.2.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
